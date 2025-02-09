@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot with File Upload</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Chat Messages -->
+        <div id="chatbox"></div>
+
+        <!-- Input & Upload Section -->
+        <div class="input-container">
+            <button class="upload-btn" onclick="toggleUploadMenu()">+</button>
+
+            <!-- Upload Menu (Initially Hidden) -->
+            <div id="upload-menu" class="upload-menu hidden">
+                <button onclick="triggerFileInput()">📄 Upload File</button>
+            </div>
+
+            <!-- Hidden File Input -->
+            <input type="file" id="fileInput" class="hidden-file-input" />
+
+            <!-- Chat Input -->
+            <input type="text" id="userInput" placeholder="Type your message here..." />
+            <button onclick="sendMessage()">➤</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
